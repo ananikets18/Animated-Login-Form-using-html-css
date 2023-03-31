@@ -1,0 +1,205 @@
+/* ===== GOOGLE FONT (Roboto:300,400,500) ===== */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+:root {
+  /* ===== COLOR ==== */
+  --white-color: hsl(0, 0%, 90%);
+
+  /* ===== FONT-SIZE ===== */
+  --large-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+
+  /* ===== FONT-WEIGHT ===== */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+}
+
+/* ===== ROOT RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/* ===== HTML RESET ===== */
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+/* ===== ION-ICON RESET ===== */
+ion-icon {
+  --ionicon-stroke-width: 40px;
+  font-size: 24px;
+}
+
+/* ===== BACKGROUND-IMAGE WRAPPER ===== */
+.background_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.background_wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/bg-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.88);
+  z-index: -1;
+}
+/* ===== LOGIN-FORM ===== */
+.login_form_wrapper {
+  z-index: 999;
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--white-color);
+  color: hsla(0, 0%, 100%, 0.897);
+
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem 3.5rem;
+  width: 26.25rem;
+}
+/* ===== TITLE ===== */
+.title {
+  display: block;
+  text-align: center;
+  font-size: var(--large-font-size);
+  font-weight: var(--fw-500);
+  margin-bottom: 2rem;
+  color: var(--white-color);
+  letter-spacing: 1px;
+}
+/* ===== LOGIN-FORM-CONTENT ===== */
+.login_form_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.login_content_box {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--white-color);
+}
+.login_content_box--input {
+  width: 100%;
+  position: relative;
+}
+
+/* ===== LOGIN-INPUT ===== */
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background-color: transparent;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+  font-size: 1.125rem;
+}
+/* ===== LOGIN-LABEL ===== */
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--fw-400);
+  transition: top 0.3s, font-weight 0.3s;
+}
+.password--input {
+  padding-right: 1.8rem;
+}
+.password__hidden {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  z-index: 10;
+  cursor: pointer;
+}
+.remember_login,
+.remember_login_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.remember_login {
+  margin-bottom: 1rem;
+}
+.remember_login_content {
+  column-gap: 0.4rem;
+}
+.remember_login_input {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+.forget__login {
+  color: var(--white-color);
+}
+.forget__login:hover {
+  text-decoration: underline;
+}
+/* ===== BUTTON LOGIN ===== */
+.button__login {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background-color: hsla(0, 0%, 100%, 0.796);
+  font-weight: var(--fw-500);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  transition: background-color 0.4s ease;
+  letter-spacing: 0.5px;
+}
+.button__login:hover {
+  background-color: hsla(0, 0%, 0%, 0.796);
+  color: var(--white-color);
+}
+/* ===== REGISTER LOGIN ===== */
+.register__login {
+  text-align: center;
+}
+.register__login a {
+  color: hsla(61, 98%, 47%, 0.897);
+  font-weight: var(--fw-500);
+}
+.register__login a:hover {
+  text-decoration: underline;
+}
+/* ===== INPUT FOCUS TRANSITION ===== */
+.login__input:focus + .login__label {
+  top: -12px;
+  font-weight: var(--fw-500);
+}
+/* ===== STICKY INPUT ON FOCUS WITH TRANSITION ===== */
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+}

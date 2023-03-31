@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Login Form using HTML & CSS</title>
+    <!-- ====== STYLE.CSS ====== -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- ====== IONICONS CDN ====== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- ====== BACKGROUND-WRAPPER ====== -->
+    <main class="background_wrapper">
+      <div class="login_form_wrapper">
+        <!-- ====== FORM ====== -->
+        <form action="#" class="login__form">
+          <h1 class="title">Login</h1>
+
+          <div class="login_form_content">
+            <!-- ====== LOGIN-CONTENT-BOX-1 ====== -->
+            <div class="login_content_box">
+              <ion-icon name="person-outline"></ion-icon>
+
+              <div class="login_content_box--input">
+                <input
+                  type="email"
+                  placeholder=" "
+                  class="login__input email--input"
+                  required
+                />
+                <label for="email" class="login__label">Email</label>
+              </div>
+            </div>
+            <!-- ====== LOGIN-CONTENT-BOX-2 ====== -->
+            <div class="login_content_box">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+
+              <div class="login_content_box--input">
+                <input
+                  type="password"
+                  placeholder=" "
+                  class="login__input password--input"
+                  required
+                />
+                <label for="password" class="login__label">Password</label>
+                <ion-icon
+                  class="password__hidden"
+                  id="password_hidden"
+                  name="eye-off-outline"
+                ></ion-icon>
+              </div>
+            </div>
+            <!-- ====== REMEMBER-LOGIN ====== -->
+            <div class="remember_login">
+              <div class="remember_login_content">
+                <input type="checkbox" class="remember_login_input" />
+                <label for="remember" class="remember_login_label text--sm"
+                  >Remember me</label
+                >
+              </div>
+              <!-- ====== FORGET PASSWORD ====== -->
+              <a href="#" class="forget__login text--sm">Forget password?</a>
+            </div>
+
+            <!-- ====== LOGIN BUTTON ====== -->
+            <button class="button__login">Login</button>
+            <!-- ====== REGISTER LOGIN ====== -->
+            <p class="register__login text--sm">
+              Don't have an account ? <a href="#">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- ====== SCRIPT.JS ====== -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
